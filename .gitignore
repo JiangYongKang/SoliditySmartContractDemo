@@ -37,3 +37,5 @@ yarn-error.log*
 build
 .infura-secret
 .secret
+.openzeppelin
+/logs
