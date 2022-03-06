@@ -23,7 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: INSTALL
-      run: npm install
+      run: yarn install
 
     - name: TEST
       run: npx hardhat test
