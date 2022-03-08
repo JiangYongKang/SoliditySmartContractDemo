@@ -8,11 +8,10 @@ contract MerkleTreeVerify {
     /**
      * Merkle Root Hash Value
      */
-    bytes32 public saleMerkleRoot;
+    bytes32 public saleMerkleRoot =
+        0xd38a533706a576a634c618407eb607df606d62179156c0bed7ab6c2088b01de9;
 
-    constructor(bytes32 merkleRoot) {
-        saleMerkleRoot = merkleRoot;
-    }
+    constructor() {}
 
     /**
      * 需要有白名单权限才能正常调用
