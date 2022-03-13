@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Auto Build
 
 on:
   push:
@@ -22,8 +22,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: INSTALL
+    - name: Yarn Install
       run: yarn install
 
-    - name: TEST
+    - name: Yarn Test
       run: npx hardhat test
+
+    - name: Deploy
+      run: |
+        mv .env.example .env
+        yarn deploy:common-util
+        yarn deploy:simple-erc20
+        yarn deploy:simple-erc721
+        yarn deploy:merkle-tree-verify
