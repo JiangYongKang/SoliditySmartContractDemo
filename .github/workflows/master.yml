@@ -30,6 +30,7 @@ jobs:
 
     - name: Deploy
       run: |
+        mv .env.example .env
         yarn deploy:common-util
         yarn deploy:simple-erc20
         yarn deploy:simple-erc721
